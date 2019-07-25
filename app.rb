@@ -8,3 +8,14 @@ Bundler.require
 $:.unshift File.expand_path('./../lib', __FILE__)
 #grâce à cette ligne ci-dessus, pour appeler mes fichiers du dossier lib, je n ai plus qu'à mettre sur une nouvelle 
   #ligne require 'NomDuFichier', puis à appeler la classe qui m'intéresse avec sur une nouvelle ligne avec MyClass.new.perform.
+
+require_relative 'board'
+require_relative 'boardcase'
+require_relative 'game'
+require_relative 'player'
+require_relative 'application'
+require_relative './../views/show'
+
+app = Application.new
+
+app.perform
